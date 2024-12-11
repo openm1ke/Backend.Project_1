@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "208d5c67-06be-42d1-8e69-6457df82002e",
+		"name": "Backend1_Part3_TelegramAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7995016"
+	},
+	"item": [
+		{
+			"name": "getMe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/getMe",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"getMe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/sendMessage?text=/start&chat_id=xxx",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"sendMessage"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "/start"
+						},
+						{
+							"key": "chat_id",
+							"value": "xxx"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUpdates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/getUpdates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"getUpdates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfilePhotos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/getUserProfilePhotos?user_id=7785268811",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"getUserProfilePhotos"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "7785268811"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfilePhotos Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "xxx",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/pinChatMessage",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"pinChatMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendPhoto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/mnt/d/PROJECTS/IdeaProjects/Backend.Project_1-1/src/part3/pics/devops_qa.docx"
+						},
+						{
+							"key": "chat_id",
+							"value": "xxx",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.telegram.org/bot{{botToken}}/sendPhoto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"bot{{botToken}}",
+						"sendPhoto"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "xxx",
+							"disabled": true
+						},
+						{
+							"key": "photo",
+							"value": "https://img.freepik.com/free-vector/browsing-online-concept-illustration_114360-4684.jpg?t=st=1729764179~exp=1729767779~hmac=ff918e5e19ed0c138036180bda5fcb417727d66e16b86318a7ed941174579e8a&w=826",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "inherit"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "botToken",
+			"value": "xxx:yyy-zzz",
+			"type": "string"
+		}
+	]
+}
